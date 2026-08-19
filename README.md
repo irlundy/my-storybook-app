@@ -1,16 +1,38 @@
-# React + Vite
+# React + Vite + Storybook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a learning sandbox for exploring [Storybook](https://storybook.js.org/) with React and plain CSS.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Clone the repo, then from the project folder:
 
-## React Compiler
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This installs everything the project needs. Run it once after cloning, and again any time `package.json` changes.
 
-## Expanding the ESLint configuration
+## Available Commands
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Command | What it does |
+|---|---|
+| `npm run dev` | Starts the actual React app at `http://localhost:5173` |
+| `npm run storybook` | Starts Storybook at `http://localhost:6006` — this is where you'll spend most of your time |
+| `npm run build` | Builds the app for production (won't be needed for this project) |
+| `npm run build-storybook` | Builds a static, shareable version of Storybook (not needed yet, but good to know exists) |
+
+## Project Structure
+
+- `src/components/` — your React components live here
+- `src/components/*.stories.jsx` — each component's Storybook file, showing its different states/props
+- Each component has a matching `.css` file for styling
+
+## Learning Storybook
+
+Start Storybook with `npm run storybook`, then explore the example components already in the sidebar. When you're ready, try creating a new component + story pair from scratch — that's the core loop of how Storybook works.
+
+---
+
+## About this template
+
+This project uses [Vite](https://vite.dev/) to run React, with either [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) or [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) for fast refresh during development. Neither requires any action from you — this is just background info if you're curious.
