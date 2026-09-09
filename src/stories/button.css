@@ -6,15 +6,40 @@
   font-weight: 700;
   line-height: 1;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+.storybook-button:focus-visible {
+  outline: 2px solid #1ea7fd;
+  outline-offset: 2px;
+}
+.storybook-button:active {
+  transform: scale(0.97);
+}
+.storybook-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
 }
 .storybook-button--primary {
-  background-color: #555ab9;
+  background-color: #212689;
   color: white;
+}
+.storybook-button--primary:hover:not(:disabled) {
+  background-color: #2c32ad;
+}
+.storybook-button--primary:active:not(:disabled) {
+  background-color: #191d6b;
 }
 .storybook-button--secondary {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
   background-color: transparent;
   color: #333;
+}
+.storybook-button--secondary:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.storybook-button--secondary:active:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.07);
 }
 .storybook-button--small {
   padding: 10px 16px;
