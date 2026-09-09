@@ -36,3 +36,6 @@ Start Storybook with `npm run storybook`, then explore the example components al
 ## About this template
 
 This project uses [Vite](https://vite.dev/) to run React, with either [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) or [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) for fast refresh during development. Neither requires any action from you — this is just background info if you're curious.
+
+
+## Additional 
