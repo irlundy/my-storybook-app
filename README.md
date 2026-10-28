@@ -23,8 +23,8 @@ This installs everything the project needs. Run it once after cloning, and again
 
 ## Project Structure
 
-- `src/components/` — your React components live here
-- `src/components/*.stories.jsx` — each component's Storybook file, showing its different states/props
+- `src/stories/` — your React components live here
+- `src/stories/<ComponentName>.stories.js` — each component's Storybook file, showing its different states/props
 - Each component has a matching `.css` file for styling
 
 ## Learning Storybook
