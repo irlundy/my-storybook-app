@@ -75,10 +75,17 @@ Anything in `<angle brackets>` is a placeholder. Replace it, brackets included.
 2. `git pull origin main`, so main is up to date (from GitHub)
 3. `git checkout -b <branch-name>`, a branch for the work
 4. `code .` to open the project in VS Code, then make changes and save
-5. `git add .` to stage my changes, then `git commit -m "<what I did>"` to save them to my local history with a message
-6. `git push` to send my commits to GitHub (the first push of a new branch needs `git push --set-upstream origin <branch-name>`, and Terminal will show me the exact line)
-7. Open a PR on GitHub, review it, merge it
-8. Back to step 1, then delete the old branch with `git branch -d <branch-name>`
+5. `git add .` to stage my changes (picks what goes into the commit)
+6. `git commit -m "<what I did>"` to save them to my local history with a message (nothing reaches GitHub without this)
+7. `git push` to send my commits to GitHub (the first push of a new branch needs `git push --set-upstream origin <branch-name>`, and Terminal will show me the exact line)
+8. Open a PR on GitHub. **Check the base says `irlundy:main`, not `pennmeg:main`.** Check that Files changed shows only my changes, then merge
+9. Clean up on GitHub: click **Delete branch** on the merged PR page
+10. Clean up locally:
+    - `git checkout main`, back to main
+    - `git pull origin main`, to bring the merge down
+    - `git branch -d <branch-name>`, to delete the finished branch (only works once it's merged)
+    - `git fetch --prune`, to update my list of GitHub branches so deleted ones disappear
+11. Next ticket? Start again at step 1
 
 ### Good to know
 
